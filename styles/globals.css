@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btnContainer {
+    display: flex;
+    justify-content: flex-start;
+    padding: .5rem;
+}
+
+.btn {
+    height: 3.5rem;
+    outline: none;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    align-items: center;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn svg {
+    margin-right: .5rem;
+}
+
+.white {
+    background: white;
+    color: black;
+}
+
+.red {
+    background: rgb(196, 57, 85);
+    color: white;
+}
