@@ -11,7 +11,7 @@ const Home = () => {
 
   const welcomeUser = (userName, toastHandler = toast) => {
     toastHandler.success(
-      `Welcome back ${userName !== "Unnamed" ? `${userName}` : ""}!`,
+      `Welcome back${userName !== "Unnamed" ? ` ${userName}` : ""}!`,
       {
         style: {
           background: "#04111d",

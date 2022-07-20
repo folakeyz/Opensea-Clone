@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { HiTag } from "react-icons/hi";
 import { IoMdWallet } from "react-icons/io";
 import toast, { Toaster } from "react-hot-toast";
+import styles from "./styles.module.css";
 
 const style = {
   button: `mr-8 flex items-center py-2 px-12 rounded-lg cursor-pointer`,
@@ -42,14 +43,6 @@ const MakeOffer = ({ isListed, selectedNft, listings, marketPlaceModule }) => {
     quantityDesired = 1,
     module = marketPlaceModule
   ) => {
-    console.log(listingId, quantityDesired, module, "david");
-    // yo RAZA lets goooo!!!
-    //yo Qazi, ok
-    // sure okay about to run it...
-    // just clicked buy now...
-    // still error
-    // where can i see the contract address of the marketplace module
-    // in [nftId.js]
     await module
       .buyoutDirectListing({
         listingId: listingId,
@@ -61,30 +54,30 @@ const MakeOffer = ({ isListed, selectedNft, listings, marketPlaceModule }) => {
   };
 
   return (
-    <div className="flex h-20 w-full items-center rounded-lg border border-[#151c22] bg-[#303339] px-12">
+    <div className={styles.container}>
       <Toaster position="bottom-left" reverseOrder={false} />
       {isListed === "true" ? (
-        <>
+        <div className="btnContainer">
           <div
             onClick={() => {
               enableButton ? buyItem(selectedMarketNft.id, 1) : null;
             }}
-            className={`${style.button} bg-[#2081e2] hover:bg-[#42a0ff]`}
+            className={`btn green`}
           >
             <IoMdWallet className={style.buttonIcon} />
             <div className={style.buttonText}>Buy Now</div>
           </div>
-          <div
-            className={`${style.button} border border-[#151c22]  bg-[#363840] hover:bg-[#4c505c]`}
-          >
+          <div className={`btn red`}>
             <HiTag className={style.buttonIcon} />
             <div className={style.buttonText}>Make Offer</div>
           </div>
-        </>
+        </div>
       ) : (
-        <div className={`${style.button} bg-[#2081e2] hover:bg-[#42a0ff]`}>
-          <IoMdWallet className={style.buttonIcon} />
-          <div className={style.buttonText}>List Item</div>
+        <div className="btnContainer">
+          <div className={`btn gold`}>
+            <IoMdWallet className={style.buttonIcon} />
+            <div className={style.buttonText}>List Item</div>
+          </div>
         </div>
       )}
     </div>

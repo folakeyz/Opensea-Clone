@@ -72,9 +72,9 @@ const NFT = () => {
             marketPlaceModule={marketPlaceModule}
           />
         </div>
-        <div>
-          <ItemActivity />
-        </div>
+      </div>
+      <div className={styles.activity}>
+        <ItemActivity />
       </div>
     </div>
   );

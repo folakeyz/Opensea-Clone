@@ -31,10 +31,10 @@ const Hero = ({ connect = false, onClick = null }) => {
           <h1>NFTs</h1>
           <p>OpenSea is the world&apos;s first and largest NFT marketplace</p>
           <div className="btnContainer">
-            <Link href="">
+            <Link href="/collections/0x14A39e908e8b31613A47490cf378cE97bA5288B2">
               <div className="btn white">Explore</div>
             </Link>
-            <Link href="">
+            <Link href="https://thirdweb.com/dashboard">
               <div className="btn red">Create</div>
             </Link>
           </div>

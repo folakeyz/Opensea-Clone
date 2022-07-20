@@ -37,7 +37,7 @@ const Header = () => {
           <li>
             <Link href="/stats">Stats</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/resources">Resources</Link>
           </li>
           <li>
@@ -45,14 +45,14 @@ const Header = () => {
           </li>
           <li>
             <Link href="/profile">
-              <div>{/* <CgProfile /> */}</div>
+              <div> <CgProfile /> </div>
             </Link>
           </li>
           <li>
             <Link href="/wallet">
-              <div>{/* <MdOutlineAccountBalanceWallet /> */}</div>
+              <div> <MdOutlineAccountBalanceWallet /> </div>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

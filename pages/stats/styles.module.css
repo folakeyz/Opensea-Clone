@@ -1,0 +1,9 @@
+.banner {
+    display: flex;
+    padding: 10rem 3rem;
+}
+
+.activity {
+    display: flex;
+    width: 100%;
+}
