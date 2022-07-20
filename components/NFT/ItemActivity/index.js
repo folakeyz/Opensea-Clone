@@ -2,7 +2,7 @@ import { CgArrowsExchangeV } from "react-icons/cg";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { useState } from "react";
 import { dummyEvents } from "../../../static/dummyEvents";
-import EventItem from "../item/EventItem";
+import EventItem from "../Item/EventItem";
 import styles from "./styles.module.css";
 
 const style = {
