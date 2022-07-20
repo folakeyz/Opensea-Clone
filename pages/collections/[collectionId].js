@@ -23,11 +23,11 @@ const Collection = () => {
 
   const nftModule = useMemo(() => {
     if (!provider) return;
-    // const sdk = new ThirdwebSDK(
-    //   provider.getSigner(),
-    //   "https://eth-rinkeby.alchemyapi.io/v2/06dT1LbCRddkDN3UnHmiDqzsSpTO_Ut3"
-    // );
-    // return sdk.getNFTModule(collectionId);
+    const sdk = new ThirdwebSDK(
+      provider.getSigner()
+      // "https://eth-rinkeby.alchemyapi.io/v2/06dT1LbCRddkDN3UnHmiDqzsSpTO_Ut3"
+    );
+    return sdk.getNFTModule(collectionId);
   }, [provider]);
 
   // get all NFTs in the collection
@@ -35,21 +35,21 @@ const Collection = () => {
     if (!nftModule) return;
     (async () => {
       const nfts = await nftModule.getAll();
-
       setNfts(nfts);
     })();
   }, [nftModule]);
 
   const marketPlaceModule = useMemo(() => {
     if (!provider) return;
+    // https://rinkeby.infura.io/v3/7a25677d3ef64e30ba17930c15362d67
+    const sdk = new ThirdwebSDK(
+      provider.getSigner()
+      // "https://eth-rinkeby.alchemyapi.io/v2/06dT1LbCRddkDN3UnHmiDqzsSpTO_Ut3"
+    );
 
-    // const sdk = new ThirdwebSDK(
-    //   provider.getSigner(),
-    //   "https://eth-rinkeby.alchemyapi.io/v2/06dT1LbCRddkDN3UnHmiDqzsSpTO_Ut3"
-    // );
-    // return sdk.getMarketplaceModule(
-    //   "0x14A39e908e8b31613A47490cf378cE97bA5288B2"
-    // );
+    return sdk.getMarketplaceModule(
+      "0xc88FE8b7e92D0a20d444f858B233528669D6175D"
+    );
   }, [provider]);
 
   // get all listings in the collection
@@ -75,7 +75,7 @@ const Collection = () => {
 
     const collectionData = await sanityClient.fetch(query);
 
-    console.log(collectionData, "🔥");
+    // console.log(collectionData, "🔥");
 
     // the query returns 1 object inside of an array
     await setCollection(collectionData[0]);
@@ -138,17 +138,17 @@ const Collection = () => {
           </div>
         </div>
         <div className={styles.desc}>{collection?.description}</div>
-
         {/* Cards */}
+
         <div className={styles.cardFlex}>
-          {nfts.map((item, i) => {
+          {nfts.map((nftItem, id) => (
             <NFTCard
-              key={i}
-              nftItem={item}
+              key={id}
+              nftItem={nftItem}
               title={collection?.title}
               listings={listings}
-            />;
-          })}
+            />
+          ))}
         </div>
         {/* Cards */}
       </div>

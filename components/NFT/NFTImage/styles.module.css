@@ -1,0 +1,35 @@
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0.3;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    background: whitesmoke;
+    padding: .5rem;
+}
+
+.topBarContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.likesCounter {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    display: flex;
+    max-height: 20rem;
+}
+
+.image img {
+    object-fit: cover;
+}

@@ -1,0 +1,67 @@
+.card {
+    width: 100%;
+    display: flex;
+    flex-basis: 23%;
+    background: white;
+    border-radius: 10px;
+    padding: 0;
+    margin-bottom: 1rem;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.imgContainer {
+    display: flex;
+    max-height: 25rem;
+}
+
+.imgContainer img {
+    object-fit: cover;
+}
+
+.itemWidget {
+    display: flex;
+}
+
+.itemWidget img {
+    margin-right: .5rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    padding-bottom: .5rem;
+}
+
+.details h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.details h6 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.details p {
+    font-size: 13px;
+    color: darkgray;
+}
+
+.likes {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.likeIcon {
+    font-size: 1.5rem;
+}

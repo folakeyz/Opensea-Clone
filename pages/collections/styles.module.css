@@ -76,6 +76,10 @@
     display: flex;
 }
 
+.itemWidget img {
+    margin-right: .5rem;
+}
+
 .img {
     width: 10px;
     height: 10px;
@@ -86,4 +90,11 @@
     padding: .5rem;
     align-items: center;
     justify-content: center;
+}
+
+.cardFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem;
 }

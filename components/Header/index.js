@@ -30,7 +30,7 @@ const Header = () => {
       <div className={styles.links}>
         <ul>
           <li>
-            <Link href="/collections/0xc88FE8b7e92D0a20d444f858B233528669D6175D">
+            <Link href="/collections/0x14A39e908e8b31613A47490cf378cE97bA5288B2">
               Collections
             </Link>
           </li>
@@ -45,12 +45,12 @@ const Header = () => {
           </li>
           <li>
             <Link href="/profile">
-              <CgProfile />
+              <div>{/* <CgProfile /> */}</div>
             </Link>
           </li>
           <li>
             <Link href="/wallet">
-              <MdOutlineAccountBalanceWallet />
+              <div>{/* <MdOutlineAccountBalanceWallet /> */}</div>
             </Link>
           </li>
         </ul>
